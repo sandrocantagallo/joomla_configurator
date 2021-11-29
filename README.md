@@ -21,19 +21,16 @@ write
 Replace in configuration.php all variable to deply
 
 ```PHP
-    public $host = '{dbhost}';
-	public $user = '{dbuser}';
-	public $password = '{dbpassword}';
-	public $db = '{dbname}';
-
-    public $mailfrom = '{mailfrom}';
-	public $fromname = '{mailfromname}';
-
-    public $smtpuser = '{mailsmtpuser}';
-	public $smtppass = '{mailsmtppassword}';
-
-    public $log_path = '{logpath}';
-	public $tmp_path = '{tmppath}';
+public $host = '{dbhost}';
+public $user = '{dbuser}';
+public $password = '{dbpassword}';
+public $db = '{dbname}';
+public $mailfrom = '{mailfrom}';
+public $fromname = '{mailfromname}';
+public $smtpuser = '{mailsmtpuser}';
+public $smtppass = '{mailsmtppassword}';
+public $log_path = '{logpath}';
+public $tmp_path = '{tmppath}';
 ```
 
 all done!
