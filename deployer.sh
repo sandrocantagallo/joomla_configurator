@@ -24,4 +24,6 @@ sed -i -e "/.*{mailsmtppassword}*./ s/.*/\tpublic \$smtppass = '$mailsmtppasswor
 sed -i -e "/.*{logpath}*./ s/.*/\tpublic \$log_path = '$logpath';/" $joomlapath/configuration.php
 sed -i -e "/.*{tmppath}*./ s/.*/\tpublic \$tmp_path = '$tmppath';/" $joomlapath/configuration.php
 # htaccess Variable
+basepath=""
 # Sed commant todo find and replace
+sed -i -e "/.*{basepath}*./ s/.*/RewriteBase {basepath}/" $joomlapath/.htaccess
