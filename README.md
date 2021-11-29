@@ -4,4 +4,36 @@ A handy script to deploy our jooma installations! On multiple environments (prod
 
 ## Installation
 
+for _logpath_ and _tmppath_ remember to quote slash of path example
+
+```SHELL
+/var/www/html/tmp
+```
+
+write
+
+```SHELL
+\/var\/www\/html\/tmp
+```
+
 ## Joomla! Implementation
+
+Replace in configuration.php all variable to deply
+
+```PHP
+    public $host = '{dbhost}';
+	public $user = '{dbuser}';
+	public $password = '{dbpassword}';
+	public $db = '{dbname}';
+
+    public $mailfrom = '{mailfrom}';
+	public $fromname = '{mailfromname}';
+
+    public $smtpuser = '{mailsmtpuser}';
+	public $smtppass = '{mailsmtppassword}';
+
+    public $log_path = '{logpath}';
+	public $tmp_path = '{tmppath}';
+```
+
+all done!
