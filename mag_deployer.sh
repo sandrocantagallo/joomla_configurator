@@ -30,7 +30,8 @@ sed -i -e "/.*{newsletter_form}*./ s/.*/\tdefine\(\"newsletter_form\", $newslett
 sed -i -e "/.*{menu_static}*./ s/.*/\tdefine\(\"menu_static\", $menu_static\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{google_user_id}*./ s/.*/\tdefine\(\"google_user_id\", \"$google_user_id\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{show_cookie_banner}*./ s/.*/\tdefine\(\"show_cookie_banner\", $show_cookie_banner\);/" $joomlapath/mag/Include/config.php
-sed -i -e "/.*{testo_cookie_privacy}*./ s/.*/\tdefine\(\"testo_cookie_privacy\", \"$testo_cookie_privacy\"\);/" $joomlapath/mag/Include/config.php
+ESCAPED_KEYWORD=$(printf '%s\n' "$testo_cookie_privacy" | sed -e 's/[]\/$*.^[]/\\&/g');
+sed -i -e "/.*{testo_cookie_privacy}*./ s/.*/\tdefine\(\"testo_cookie_privacy\", \"$ESCAPED_KEYWORD\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{cookie_policy_link}*./ s/.*/\tdefine\(\"cookie_policy_link\", \"$cookie_policy_link\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{privacy_policy_link}*./ s/.*/\tdefine\(\"privacy_policy_link\", \"$privacy_policy_link\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{folder_installation}*./ s/.*/\tdefine\(\"folder_installation\", \"$folder_installation\"\);/" $joomlapath/mag/Include/config.php
