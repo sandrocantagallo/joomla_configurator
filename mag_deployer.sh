@@ -40,15 +40,15 @@ sed -i -e "/.*{offline}*./ s/.*/\tdefine\(\"offline\", $offline\);/" $joomlapath
 # file config codeigniter CMS
 configuration_file=""
 base_url=""
-sed -i -e "/.*{base_url}*./ s/.*/\$config['base_url'] = '$base_url';/" $joomlapath/mag$cms_path$configuration_file
+sed -i -e "/.*{base_url}*./ s/.*/\$config['base_url'] = '$base_url';/" $joomlapath$configuration_file
 database_file=""
 hostname=""
 username=""
 password=""
 database=""
-sed -i -e "/.*{hostname}*./ s/.*/\t'hostname' => '$hostname',/" $joomlapath/mag$cms_path$database_file
-sed -i -e "/.*{username}*./ s/.*/\t'username' => '$username',/" $joomlapath/mag$cms_path$database_file
-sed -i -e "/.*{password}*./ s/.*/\t'password' => '$password',/" $joomlapath/mag$cms_path$database_file
-sed -i -e "/.*{database}*./ s/.*/\t'database' => '$database',/" $joomlapath/mag$cms_path$database_file
+sed -i -e "/.*{hostname}*./ s/.*/\t'hostname' => '$hostname',/" $joomlapath$database_file
+sed -i -e "/.*{username}*./ s/.*/\t'username' => '$username',/" $joomlapath$database_file
+sed -i -e "/.*{password}*./ s/.*/\t'password' => '$password',/" $joomlapath$database_file
+sed -i -e "/.*{database}*./ s/.*/\t'database' => '$database',/" $joomlapath$database_file
 
 
