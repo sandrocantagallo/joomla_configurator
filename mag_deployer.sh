@@ -1,5 +1,6 @@
 # htaccess var
 cmsmagazine_base=""
+cmsmagazine_rule=""
 # Joomla path installation
 joomlapath=""
 # config magazine
@@ -18,6 +19,7 @@ folder_installation=""
 offline=""
 # htaccess Sed commant todo find and replace
 sed -i -e "/.*{cmsmagazine_base}*./ s/.*/RewriteBase $cmsmagazine_base\//" $joomlapath/mag/.htaccess
+sed -i -e "/.*{cmsmagazine_rule}*./ s/.*/RewriteRule ^\([^\\.]+\)\.html$ $cmsmagazine_rule\/index.php?code=\$1 [NC,L]/" $joomlapath/mag/.htaccess
 # config for magazine frontend Sed commant todo find and replace
 sed -i -e "/.*{cmsmagazine_base}*./ s/.*/\tdefine\(\"magazine_url\", \"$magazine_url\"\);/" $joomlapath/mag/Includes/config.php
 sed -i -e "/.*{site_url}*./ s/.*/\tdefine\(\"site_url\", \"$site_url\"\);/" $joomlapath/mag/Includes/config.php
