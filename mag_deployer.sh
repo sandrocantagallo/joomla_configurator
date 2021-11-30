@@ -36,3 +36,4 @@ sed -i -e "/.*{cookie_policy_link}*./ s/.*/\tdefine\(\"cookie_policy_link\", \"$
 sed -i -e "/.*{privacy_policy_link}*./ s/.*/\tdefine\(\"privacy_policy_link\", \"$privacy_policy_link\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{folder_installation}*./ s/.*/\tdefine\(\"folder_installation\", \"$folder_installation\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{offline}*./ s/.*/\tdefine\(\"offline\", $offline\);/" $joomlapath/mag/Include/config.php
+#escaped_keyword funziona
