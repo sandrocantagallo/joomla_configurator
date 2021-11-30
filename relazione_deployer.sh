@@ -39,18 +39,6 @@ sed -i -e "/.*{privacy_policy_link}*./ s/.*/\tdefine\(\"privacy_policy_link\", \
 sed -i -e "/.*{folder_installation}*./ s/.*/\tdefine\(\"folder_installation\", \"$folder_installation\"\);/" $joomlapath/mag/Include/config.php
 sed -i -e "/.*{offline}*./ s/.*/\tdefine\(\"offline\", $offline\);/" $joomlapath/mag/Include/config.php
 #escaped_keyword funziona
-# file config codeigniter CMS
-configuration_file=""
-base_url=""
-sed -i -e "/.*{base_url}*./ s/.*/\$config['base_url'] = '$base_url';/" $joomlapath$configuration_file
-database_file=""
-hostname=""
-username=""
-password=""
-database=""
-sed -i -e "/.*{hostname}*./ s/.*/\t'hostname' => '$hostname',/" $joomlapath$database_file
-sed -i -e "/.*{username}*./ s/.*/\t'username' => '$username',/" $joomlapath$database_file
-sed -i -e "/.*{password}*./ s/.*/\t'password' => '$password',/" $joomlapath$database_file
-sed -i -e "/.*{database}*./ s/.*/\t'database' => '$database',/" $joomlapath$database_file
+
 
 
