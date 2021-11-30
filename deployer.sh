@@ -26,4 +26,4 @@ sed -i -e "/.*{tmppath}*./ s/.*/\tpublic \$tmp_path = '$tmppath';/" $joomlapath/
 # htaccess Variable
 basepath=""
 # Sed commant todo find and replace
-sed -i -e "/.*{basepath}*./ s/.*/RewriteBase {basepath}/" $joomlapath/.htaccess
+sed -i -e "/.*{basepath}*./ s/.*/RewriteBase $basepath\//" $joomlapath/.htaccess
