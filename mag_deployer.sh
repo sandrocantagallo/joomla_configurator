@@ -1,3 +1,4 @@
+#!/bin/bash
 # htaccess var
 cmsmagazine_base=""
 cmsmagazine_rule=""
